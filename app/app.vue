@@ -1,78 +1,80 @@
-<script setup>
-useHead({
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
-  htmlAttrs: {
-    lang: 'en'
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+interface NavigationMenuItem {
+  label: string
+  to: string
+  active: boolean
+}
+
+const route = useRoute()
+
+const items = computed<NavigationMenuItem[]>(() => [
+  {
+    label: 'Home',
+    to: '/',
+    active: route.path === '/'
+  },
+  {
+    label: 'Veicoli',
+    to: '/vehicles',
+    active: route.path.startsWith('/vehicles')
+  },
+  {
+    label: 'Tour',
+    to: '/tours',
+    active: route.path.startsWith('/tours')
+  },
+  {
+    label: 'Corsi',
+    to: '/courses',
+    active: route.path.startsWith('/courses')
   }
-})
+])
 
-const title = 'Nuxt Starter Template'
-const description = 'A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours.'
-
-useSeoMeta({
-  title,
-  description,
-  ogTitle: title,
-  ogDescription: description,
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
-  twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
-  twitterCard: 'summary_large_image'
-})
 </script>
 
 <template>
   <UApp>
     <UHeader>
       <template #left>
-        <NuxtLink to="/">
-          <AppLogo class="w-auto h-6 shrink-0" />
+        <NuxtLink to="/" class="flex items-center gap-2">
+          <img src="/logo.png" alt="Rent Ride Pesaro Logo" class="w-auto h-12 shrink-0" />
+          <div class="text-xl font-bold">Rent&Ride</div>
         </NuxtLink>
-
-        <TemplateMenu />
       </template>
 
-      <template #right>
-        <UColorModeButton />
 
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="neutral"
-          variant="ghost"
-        />
+
+      <template #right>
+        <UNavigationMenu :items="items" />
       </template>
     </UHeader>
 
     <UMain>
-      <NuxtPage />
-    </UMain>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" />
+    </UMain>
 
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          Built with Nuxt UI • © {{ new Date().getFullYear() }}
+          Built with ❤️ from Marco Zellini • © {{ new Date().getFullYear() }}
         </p>
       </template>
 
       <template #right>
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="neutral"
-          variant="ghost"
-        />
+        <UTooltip text="Instagram">
+          <UButton to="https://www.instagram.com/rent_ride_pesaro/" target="_blank" icon="i-simple-icons-instagram"
+            aria-label="Instagram" color="neutral" variant="ghost" />
+        </UTooltip>
+        <UTooltip text="Facebook">
+          <UButton to="https://www.facebook.com/p/RentRide-100083296144373/" target="_blank"
+            icon="i-simple-icons-facebook" aria-label="Facebook" color="neutral" variant="ghost" />
+        </UTooltip>
       </template>
     </UFooter>
   </UApp>
 </template>
+
+<style scoped></style>
