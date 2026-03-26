@@ -1,8 +1,11 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'green',
-      neutral: 'slate'
+      primary: 'primary',
+      neutral: 'zinc'
+    },
+    font: {
+      montserrat: 'Montserrat, sans-serif'
     }
   }
 })

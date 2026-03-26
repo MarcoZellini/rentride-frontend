@@ -4,6 +4,7 @@
 
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
 
   --color-green-50: #EFFDF5;
   --color-green-100: #D9FBE8;
@@ -16,8 +17,16 @@
   --color-green-800: #016538;
   --color-green-900: #0A5331;
   --color-green-950: #052E16;
-}
 
-html {
-  font-family: 'Montserrat', sans-serif;
+  --color-primary-50: #FFF5F5;
+  --color-primary-100: #FFE5E5;
+  --color-primary-200: #FFB3B3;
+  --color-primary-300: #FF8080;
+  --color-primary-400: #FF4D4D;
+  --color-primary-500: #FF1A1A;
+  --color-primary-600: #E60000;
+  --color-primary-700: #B30000;
+  --color-primary-800: #800000;
+  --color-primary-900: #4D0000;
+  --color-primary-950: #260000;
 }
