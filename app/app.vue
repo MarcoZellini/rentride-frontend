@@ -7,7 +7,9 @@ import Footer from './components/AppFooter.vue'
   <UApp>
     <Header />
 
-    <UMain />
+    <UMain>
+      <NuxtPage />
+    </UMain>
 
     <Footer />
   </UApp>

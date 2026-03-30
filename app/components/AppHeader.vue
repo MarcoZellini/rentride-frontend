@@ -50,8 +50,13 @@ const items = computed<NavigationMenuItem[]>(() => [
       </NuxtLink>
     </template>
 
+    <UNavigationMenu
+      class="uppercase text-2xl"
+      :items="items"
+    />
+
     <template #right>
-      <UNavigationMenu :items="items" />
+      <button>TEMPLATE</button>
     </template>
   </UHeader>
 </template>
