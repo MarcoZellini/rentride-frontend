@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "mainNavigation": "Navigazione principale",
+    "home": "Home",
+    "vehicles": "I nostri mezzi",
+    "tours": "Tour",
+    "courses": "Corsi di guida",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "bookNow": "Prenota ora",
+    "language": "Lingua"
+  },
+  "hero": {
+    "title": "Senti il territorio come non l'hai mai sentito.",
+    "subtitle": "Noleggio moto, scooter e auto a Pesaro. Tour guidati nelle strade più belle delle Marche.",
+    "ctaVehicles": "Scegli il tuo mezzo",
+    "ctaTours": "Scopri i tour"
+  },
+  "home": {
+    "seeAllVehicles": "Vedi tutti",
+    "seeAllTours": "Scopri tutti i tour",
+    "toursSectionTitle": "Tour nelle Marche",
+    "ctaReady": "Pronto a partire?",
+    "ctaReadySub": "Scegli il mezzo, scrivici o passa a trovarci. Parti domani mattina.",
+    "trustVehiclesLabel": "mezzi disponibili",
+    "trustToursLabel": "tour",
+    "trustRating": "Rating Google"
+  },
+  "vehicles": {
+    "title": "I nostri mezzi",
+    "subtitle": "Scegli la tua compagna di viaggio.",
+    "from": "da",
+    "perDay": "al giorno",
+    "discover": "Scopri di più",
+    "features": "Caratteristiche",
+    "allCategories": "Tutti",
+    "available": "Disponibile",
+    "unavailable": "Non disponibile",
+    "noResults": "Nessun veicolo disponibile in questa categoria.",
+    "contactCta": "Contattaci per noleggiare questo veicolo",
+    "callUs": "Chiamaci",
+    "whatsapp": "WhatsApp"
+  },
+  "tours": {
+    "title": "Tour organizzati",
+    "subtitle": "Le strade che non trovi su Google Maps.",
+    "mapTitle": "Mappa percorso: {name}",
+    "discover": "Scopri il percorso",
+    "duration": "Durata",
+    "difficulty": "Difficoltà",
+    "distance": "Distanza",
+    "includes": "Il tour include",
+    "highlights": "Punti di interesse",
+    "requestInfo": "Richiedi informazioni",
+    "requestInfoHint": "Scrivici per date, prezzi o per prenotare questo tour."
+  },
+  "courses": {
+    "title": "Corsi di guida",
+    "subtitle": "Dalla teoria alla strada: impara con chi conosce ogni curva.",
+    "discover": "Scopri il corso",
+    "level": "Livello",
+    "duration": "Durata",
+    "includes": "Il corso include",
+    "requestInfo": "Richiedi informazioni",
+    "requestInfoHint": "Scrivici per date, prezzi o per iscriverti a questo corso."
+  },
+  "aboutUs": {
+    "title": "Chi siamo",
+    "subtitle": "Luca conosce ogni curva. Tu devi solo guidare.",
+    "intro": "Rent&Ride nasce dalla passione per le due ruote e per il territorio delle Marche. Non siamo un noleggio qualunque: siamo il punto di partenza per chi vuole vivere strade, curve e paesaggi in modo autentico.",
+    "storyTitle": "La nostra storia",
+    "story": "Abbiamo aperto a Pesaro per offrire a turisti e motociclisti un servizio a misura di chi viaggia: moto e scooter curati, consegna dove serve, consigli sui percorsi migliori. Ogni mezzo è pronto per partire; ogni itinerario è stato provato in prima persona.",
+    "guaranteesTitle": "Garanzie e assicurazione",
+    "guarantees": "Tutti i nostri mezzi sono assicurati e revisionati. Offriamo copertura RCT e possibilità di franchigie chiare. La cauzione e le condizioni sono trasparenti: niente sorprese, solo la strada che ti aspetta.",
+    "valuesTitle": "I nostri valori",
+    "value1": "Passione per il territorio e per la guida",
+    "value2": "Trasparenza su prezzi, condizioni e mezzi",
+    "value3": "Servizio pensato per chi arriva da fuori",
+    "ctaTitle": "Pronto a partire?",
+    "ctaSub": "Scegli il tuo mezzo, scopri i tour o scrivici per qualsiasi domanda."
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Sei a un messaggio dal tuo prossimo weekend. Scrivici o chiamaci.",
+    "phone": "Telefono",
+    "email": "Email",
+    "address": "Indirizzo",
+    "hours": "Orari",
+    "callUs": "Chiama ora",
+    "whatsapp": "Scrivici su WhatsApp",
+    "whatsappPrefilledMessage": "Ciao, vorrei informazioni sul noleggio.",
+    "findUs": "Come raggiungerci",
+    "mapTitle": "Dove siamo",
+    "formName": "Nome completo",
+    "formEmail": "Email",
+    "formPhone": "Telefono (opzionale)",
+    "formSubject": "Oggetto (opzionale)",
+    "formMessage": "Messaggio",
+    "formSubmit": "Invia messaggio",
+    "formSending": "Invio in corso...",
+    "formSuccess": "Messaggio inviato! Ti risponderemo al più presto.",
+    "formError": "Si è verificato un errore. Riprova."
+  },
+  "reviews": {
+    "title": "Cosa dicono di noi",
+    "subtitle": "Le esperienze dei nostri clienti.",
+    "viewAll": "Leggi tutte le recensioni su Google",
+    "rating": "{rating} su 5",
+    "reviewCount": "{count} recensioni",
+    "readMore": "Leggi di più",
+    "readLess": "Mostra meno",
+    "onGoogle": "su Google"
+  },
+  "forms": {
+    "required": "Campo obbligatorio",
+    "invalidEmail": "Inserisci un indirizzo email valido",
+    "sending": "Invio in corso...",
+    "success": "Operazione completata",
+    "error": "Si è verificato un errore. Riprova."
+  },
+  "footer": {
+    "tagline": "Senti il territorio. Rent&Ride Pesaro.",
+    "description": "Moto, scooter e auto. Tour e corsi sulle strade che non trovi su Google Maps."
+  },
+  "errors": {
+    "notFound": "Pagina non trovata",
+    "notFoundDesc": "La pagina che cerchi non esiste o è stata spostata.",
+    "serverError": "Errore del server",
+    "networkError": "Errore di connessione. Verifica la tua connessione internet.",
+    "backHome": "Torna alla homepage"
+  },
+  "accessibility": {
+    "skipToContent": "Vai al contenuto principale",
+    "openMenu": "Apri menu di navigazione",
+    "closeMenu": "Chiudi menu di navigazione",
+    "prevImage": "Immagine precedente",
+    "nextImage": "Immagine successiva",
+    "closeGallery": "Chiudi galleria",
+    "languageSwitch": "Cambia lingua"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "readMore": "Scopri di più",
+    "backToList": "Torna alla lista",
+    "all": "Tutti",
+    "yes": "Sì",
+    "no": "No",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "create": "Crea nuovo",
+    "confirm": "Conferma",
+    "privacyPolicy": "Privacy policy"
+  },
+  "privacy": {
+    "placeholder": "Contenuto della privacy policy da inserire."
+  }
+}

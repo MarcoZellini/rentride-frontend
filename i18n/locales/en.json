@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "mainNavigation": "Main navigation",
+    "home": "Home",
+    "vehicles": "Our vehicles",
+    "tours": "Tours",
+    "courses": "Riding courses",
+    "about": "About us",
+    "contact": "Contact",
+    "bookNow": "Book now",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Feel the land like you never have before.",
+    "subtitle": "Motorcycle, scooter and car rental in Pesaro. Guided tours on the most beautiful roads of the Marche.",
+    "ctaVehicles": "Choose your ride",
+    "ctaTours": "Discover tours"
+  },
+  "home": {
+    "seeAllVehicles": "View all",
+    "seeAllTours": "Discover all tours",
+    "toursSectionTitle": "Tours in the Marche",
+    "ctaReady": "Ready to go?",
+    "ctaReadySub": "Pick your ride, get in touch or drop by. You could be on the road tomorrow.",
+    "trustVehiclesLabel": "vehicles available",
+    "trustToursLabel": "tours",
+    "trustRating": "Google rating"
+  },
+  "vehicles": {
+    "title": "Our vehicles",
+    "subtitle": "Choose your travel companion.",
+    "from": "from",
+    "perDay": "per day",
+    "discover": "Find out more",
+    "features": "Features",
+    "allCategories": "All",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "noResults": "No vehicles available in this category.",
+    "contactCta": "Contact us to rent this vehicle",
+    "callUs": "Call us",
+    "whatsapp": "WhatsApp"
+  },
+  "tours": {
+    "title": "Organised tours",
+    "subtitle": "The roads you won't find on Google Maps.",
+    "mapTitle": "Route map: {name}",
+    "discover": "Discover the route",
+    "duration": "Duration",
+    "difficulty": "Difficulty",
+    "distance": "Distance",
+    "includes": "Tour includes",
+    "highlights": "Highlights",
+    "requestInfo": "Request information",
+    "requestInfoHint": "Contact us for dates, prices or to book this tour."
+  },
+  "courses": {
+    "title": "Riding courses",
+    "subtitle": "From theory to the road: learn with people who know every bend.",
+    "discover": "Discover the course",
+    "level": "Level",
+    "duration": "Duration",
+    "includes": "Course includes",
+    "requestInfo": "Request information",
+    "requestInfoHint": "Contact us for dates, prices or to enrol in this course."
+  },
+  "aboutUs": {
+    "title": "About us",
+    "subtitle": "Luca knows every bend. You just have to ride.",
+    "intro": "Rent&Ride was born from a passion for two wheels and the Marche region. We're not just another rental: we're the starting point for anyone who wants to experience roads, curves and landscapes for real.",
+    "storyTitle": "Our story",
+    "story": "We opened in Pesaro to offer tourists and riders a service built around travel: well-maintained bikes and scooters, delivery where you need it, and advice on the best routes. Every vehicle is ready to go; every itinerary has been ridden by us first.",
+    "guaranteesTitle": "Guarantees and insurance",
+    "guarantees": "All our vehicles are insured and serviced. We offer RCT coverage and clear excess options. Deposit and terms are transparent: no surprises, just the road ahead.",
+    "valuesTitle": "What we stand for",
+    "value1": "Passion for the land and for riding",
+    "value2": "Transparency on prices, terms and vehicles",
+    "value3": "Service designed for visitors",
+    "ctaTitle": "Ready to go?",
+    "ctaSub": "Choose your ride, discover our tours or get in touch with any question."
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "You're one message away from your next weekend. Drop us a line or give us a call.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Opening hours",
+    "callUs": "Call now",
+    "whatsapp": "Message us on WhatsApp",
+    "whatsappPrefilledMessage": "Hi, I'd like to get some information about rental.",
+    "findUs": "How to find us",
+    "mapTitle": "Where we are",
+    "formName": "Full name",
+    "formEmail": "Email",
+    "formPhone": "Phone (optional)",
+    "formSubject": "Subject (optional)",
+    "formMessage": "Message",
+    "formSubmit": "Send message",
+    "formSending": "Sending...",
+    "formSuccess": "Message sent! We'll get back to you soon.",
+    "formError": "Something went wrong. Please try again."
+  },
+  "reviews": {
+    "title": "What people say about us",
+    "subtitle": "Our customers' experiences.",
+    "viewAll": "Read all reviews on Google",
+    "rating": "{rating} out of 5",
+    "reviewCount": "{count} reviews",
+    "readMore": "Read more",
+    "readLess": "Show less",
+    "onGoogle": "on Google"
+  },
+  "forms": {
+    "required": "Required field",
+    "invalidEmail": "Enter a valid email address",
+    "sending": "Sending...",
+    "success": "Done",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "tagline": "Feel the land. Rent&Ride Pesaro.",
+    "description": "Bikes, scooters and cars. Tours and courses on the roads you won't find on Google Maps."
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "notFoundDesc": "The page you're looking for doesn't exist or has been moved.",
+    "serverError": "Server error",
+    "networkError": "Connection error. Check your internet connection.",
+    "backHome": "Back to homepage"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "closeGallery": "Close gallery",
+    "languageSwitch": "Change language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "readMore": "Find out more",
+    "backToList": "Back to list",
+    "all": "All",
+    "yes": "Yes",
+    "no": "No",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create new",
+    "confirm": "Confirm",
+    "privacyPolicy": "Privacy policy"
+  },
+  "privacy": {
+    "placeholder": "Privacy policy content to be added."
+  }
+}

@@ -9,27 +9,39 @@ interface NavigationMenuItem {
 }
 
 const route = useRoute()
+const { locale, t } = useI18n()
+const localePath = useLocalePath()
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
-    label: 'Home',
-    to: '/',
+    label: t('nav.home'),
+    to: localePath('/'),
     active: route.path === '/'
   },
   {
-    label: 'Veicoli',
-    to: '/vehicles',
+    label: t('nav.vehicles'),
+    to: localePath('/vehicles'),
     active: route.path.startsWith('/vehicles')
   },
   {
-    label: 'Tour',
-    to: '/tours',
+    label: t('nav.tours'),
+    to: localePath('/tours'),
     active: route.path.startsWith('/tours')
   },
   {
-    label: 'Corsi',
-    to: '/courses',
+    label: t('nav.courses'),
+    to: localePath('/courses'),
     active: route.path.startsWith('/courses')
+  },
+  {
+    label: t('nav.about'),
+    to: localePath('/about'),
+    active: route.path.startsWith('/about')
+  },
+  {
+    label: t('nav.contact'),
+    to: localePath('/contatti'),
+    active: route.path.startsWith('/contatti')
   }
 ])
 </script>
@@ -56,7 +68,23 @@ const items = computed<NavigationMenuItem[]>(() => [
     />
 
     <template #right>
-      <button>TEMPLATE</button>
+      <NuxtLink
+        v-if="locale !== 'it'"
+        :to="$switchLocalePath('it')"
+        class="inline-flex min-h-[44px] items-center"
+      >IT</NuxtLink>
+      <NuxtLink
+        v-else
+        :to="$switchLocalePath('en')"
+        class="inline-flex min-h-[44px] items-center"
+      >EN</NuxtLink>
+
+      <NuxtLink
+        :to="localePath('/contatti')"
+        class="btn-primary inline-flex min-h-[44px] items-center"
+      >
+        {{ t('nav.bookNow') }}
+      </NuxtLink>
     </template>
   </UHeader>
 </template>
