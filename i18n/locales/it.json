@@ -8,7 +8,8 @@
     "about": "Chi siamo",
     "contact": "Contatti",
     "bookNow": "Prenota ora",
-    "language": "Lingua"
+    "language": "Lingua",
+    "hilighted": "In evidenza"
   },
   "hero": {
     "title": "Senti il territorio come non l'hai mai sentito.",
@@ -64,7 +65,7 @@
     "requestInfo": "Richiedi informazioni",
     "requestInfoHint": "Scrivici per date, prezzi o per iscriverti a questo corso."
   },
-  "aboutUs": {
+  "about": {
     "title": "Chi siamo",
     "subtitle": "Luca conosce ogni curva. Tu devi solo guidare.",
     "intro": "Rent&Ride nasce dalla passione per le due ruote e per il territorio delle Marche. Non siamo un noleggio qualunque: siamo il punto di partenza per chi vuole vivere strade, curve e paesaggi in modo autentico.",

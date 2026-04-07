@@ -211,3 +211,12 @@ button:not([class]) {
 .skip-to-content:focus {
   top: 0;
 }
+
+footer [data-slot="bottom"],
+footer [data-slot="top"] {
+  padding: 0 5rem;
+}
+
+footer [data-slot="container"] {
+  display: none;
+}

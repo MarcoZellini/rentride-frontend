@@ -15,33 +15,33 @@ const localePath = useLocalePath()
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: t('nav.home'),
-    to: localePath('/'),
-    active: route.path === '/'
+    to: '/', // 'index' punta a pages/index.vue
+    active: !!route.name?.toString().startsWith('index')
   },
   {
     label: t('nav.vehicles'),
-    to: localePath('/vehicles'),
-    active: route.path.startsWith('/vehicles')
+    to: 'veicoli', // Usa il nome del file, i18n farà il resto
+    active: !!route.name?.toString().startsWith('veicoli')
   },
   {
     label: t('nav.tours'),
-    to: localePath('/tours'),
-    active: route.path.startsWith('/tours')
+    to: 'tour',
+    active: !!route.name?.toString().startsWith('tour')
   },
   {
     label: t('nav.courses'),
-    to: localePath('/courses'),
-    active: route.path.startsWith('/courses')
+    to: 'corsi',
+    active: !!route.name?.toString().startsWith('corsi')
   },
   {
     label: t('nav.about'),
-    to: localePath('/about'),
-    active: route.path.startsWith('/about')
+    to: 'chi-siamo',
+    active: !!route.name?.toString().startsWith('chi-siamo')
   },
   {
     label: t('nav.contact'),
-    to: localePath('/contatti'),
-    active: route.path.startsWith('/contatti')
+    to: 'contatti',
+    active: !!route.name?.toString().startsWith('contatti')
   }
 ])
 </script>

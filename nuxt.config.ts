@@ -28,6 +28,30 @@ export default defineNuxtConfig({
       { code: 'it', name: 'Italiano', file: 'it.json' },
       { code: 'en', name: 'English', file: 'en.json' }
     ],
-    defaultLocale: 'it'
+    defaultLocale: 'it',
+    strategy: 'prefix', // o 'prefix_except_default' se vuoi escludere il default locale
+    pages: {
+      // Nome del file nella cartella pages : percorsi localizzati
+      'veicoli': {
+        it: '/veicoli',
+        en: '/vehicles'
+      },
+      'tour': {
+        it: '/tour',
+        en: '/tours'
+      },
+      'corsi': {
+        it: '/corsi',
+        en: '/courses'
+      },
+      'chi-siamo': {
+        it: '/chi-siamo',
+        en: '/about-us'
+      },
+      'contatti': {
+        it: '/contatti',
+        en: '/contact'
+      }
+    }
   }
 })

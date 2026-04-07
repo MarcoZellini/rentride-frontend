@@ -8,7 +8,8 @@
     "about": "About us",
     "contact": "Contact",
     "bookNow": "Book now",
-    "language": "Language"
+    "language": "Language",
+    "hilighted": "Highlighted"
   },
   "hero": {
     "title": "Feel the land like you never have before.",
@@ -64,7 +65,7 @@
     "requestInfo": "Request information",
     "requestInfoHint": "Contact us for dates, prices or to enrol in this course."
   },
-  "aboutUs": {
+  "about": {
     "title": "About us",
     "subtitle": "Luca knows every bend. You just have to ride.",
     "intro": "Rent&Ride was born from a passion for two wheels and the Marche region. We're not just another rental: we're the starting point for anyone who wants to experience roads, curves and landscapes for real.",
