@@ -71,17 +71,17 @@ const items = computed<NavigationMenuItem[]>(() => [
       <NuxtLink
         v-if="locale !== 'it'"
         :to="$switchLocalePath('it')"
-        class="inline-flex min-h-[44px] items-center"
+        class="inline-flex min-h-11 items-center"
       >IT</NuxtLink>
       <NuxtLink
         v-else
         :to="$switchLocalePath('en')"
-        class="inline-flex min-h-[44px] items-center"
+        class="inline-flex min-h-11 items-center"
       >EN</NuxtLink>
 
       <NuxtLink
         :to="localePath('/contatti')"
-        class="btn-primary inline-flex min-h-[44px] items-center"
+        class="btn-primary inline-flex min-h-11 items-center ms-3"
       >
         {{ t('nav.bookNow') }}
       </NuxtLink>

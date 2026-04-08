@@ -1,13 +1,31 @@
 <script setup lang="ts">
+import Icon from '@nuxt/ui/components/Icon'
+
 const { t } = useI18n()
 const localePath = useLocalePath()
+
+const trustMetrics = { // Questi dati dovrebbero idealmente venire da un'API, ma per ora li hardcodiamo
+  vehiclesCount: 120,
+  toursCount: 35,
+  googleRating: 4.8
+}
+const previewVehicles = [
+  { id: 1, name: 'Vespa Primavera', image: '/vehicles/vespa-primavera.jpg' },
+  { id: 2, name: 'Lambretta LI', image: '/vehicles/lambretta-li.jpg' },
+  { id: 3, name: 'Piaggio Liberty', image: '/vehicles/piaggio-liberty.jpg' }
+]
+const previewTours = [
+  { id: 1, name: 'Tour Città', image: '/tours/tour-citta.jpg' },
+  { id: 2, name: 'Tour Collina', image: '/tours/tour-collina.jpg' },
+  { id: 3, name: 'Tour Mare', image: '/tours/tour-mare.jpg' }
+]
 </script>
 
 <template>
   <div>
     <section
       ref="heroRef"
-      class="relative flex min-h-[100svh] flex-col justify-end bg-dark pb-12 pt-24 md:justify-center md:pb-24 md:pt-32"
+      class="relative flex min-h-[svh] flex-col justify-end bg-dark pb-12 pt-24 md:justify-center md:pb-24 md:pt-32"
       aria-label="Hero"
     >
       <div
@@ -36,13 +54,13 @@ const localePath = useLocalePath()
         >
           <NuxtLink
             :to="localePath('/veicoli')"
-            class="btn-primary inline-flex min-h-[44px] items-center px-6 py-3"
+            class="btn-primary inline-flex min-h-11 items-center px-6 py-3"
           >
             {{ t('hero.ctaVehicles') }}
           </NuxtLink>
           <NuxtLink
             :to="localePath('/tour')"
-            class="btn-secondary inline-flex min-h-[44px] items-center border-white bg-transparent px-6 py-3 text-white hover:bg-white/10"
+            class="btn-secondary inline-flex min-h-11 items-center px-6 py-3"
           >
             {{ t('hero.ctaTours') }}
           </NuxtLink>
@@ -52,25 +70,51 @@ const localePath = useLocalePath()
 
     <section
       v-if="trustMetrics"
-      class="border-b border-gray-200 bg-white py-6"
+      class="border-b border-gray-200 bg-white py-10"
       aria-label="Numeri"
     >
-      <div class="mx-auto flex max-w-7xl flex-wrap justify-center gap-8 px-4 md:px-6">
-        <p class="text-center text-gray-700">
-          <span class="font-display text-2xl font-bold text-primary">{{ trustMetrics.vehiclesCount }}</span>
-          <span class="ml-1">{{ t('home.trustVehiclesLabel') }}</span>
-        </p>
-        <p class="text-center text-gray-700">
-          <span class="font-display text-2xl font-bold text-primary">{{ trustMetrics.toursCount }}</span>
-          <span class="ml-1">{{ t('home.trustToursLabel') }}</span>
-        </p>
-        <p
+      <div class="flex justify-between items-center flex-wrap mx-100 px-4 md:px-6">
+        <div class="flex flex-col items-center text-center text-gray-700 gap-3">
+          <UIcon
+            name="lucide-car"
+            class="h-8 w-8 text-primary"
+          />
+          <div class="font-display text-2xl font-bold text-primary">
+            {{ trustMetrics.vehiclesCount }}
+          </div>
+          <div class="ml-1">
+            {{ t('home.trustVehiclesLabel') }}
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center text-center text-gray-700 gap-3">
+          <UIcon
+            name="lucide-map"
+            class="h-8 w-8 text-primary"
+          />
+          <div class="font-display text-2xl font-bold text-primary">
+            {{ trustMetrics.toursCount }}
+          </div>
+          <div class="ml-1">
+            {{ t('home.trustToursLabel') }}
+          </div>
+        </div>
+
+        <div
           v-if="trustMetrics.googleRating != null"
-          class="text-center text-gray-700"
+          class="flex flex-col items-center text-center text-gray-700 gap-3"
         >
-          <span class="font-display text-2xl font-bold text-primary">{{ trustMetrics.googleRating }}</span>
-          <span class="ml-1">{{ t('home.trustRating') }}</span>
-        </p>
+          <UIcon
+            name="lucide-star"
+            class="h-8 w-8 text-primary"
+          />
+          <div class="font-display text-2xl font-bold text-primary">
+            {{ trustMetrics.googleRating }}
+          </div>
+          <div class="ml-1">
+            {{ t('home.trustRating') }}
+          </div>
+        </div>
       </div>
     </section>
 
@@ -94,7 +138,7 @@ const localePath = useLocalePath()
       <div class="mt-8">
         <NuxtLink
           :to="localePath('/veicoli')"
-          class="focus-ring inline-flex min-h-[44px] items-center font-medium text-primary hover:underline"
+          class="focus-ring inline-flex min-h-11 items-center font-medium text-primary hover:underline"
         >
           {{ t('home.seeAllVehicles') }} →
         </NuxtLink>
@@ -119,7 +163,7 @@ const localePath = useLocalePath()
         <div class="mt-8">
           <NuxtLink
             :to="localePath('/tour')"
-            class="focus-ring inline-flex min-h-[44px] items-center font-medium text-primary hover:underline"
+            class="focus-ring inline-flex min-h-11 items-center font-medium text-primary hover:underline"
           >
             {{ t('home.seeAllTours') }} →
           </NuxtLink>
@@ -140,7 +184,7 @@ const localePath = useLocalePath()
         <div class="mt-8 flex flex-wrap justify-center gap-4">
           <NuxtLink
             :to="localePath('/contatti')"
-            class="btn-primary inline-flex min-h-[44px] items-center px-6 py-3"
+            class="btn-primary inline-flex min-h-11 items-center px-6 py-3"
           >
             {{ t('nav.contact') }}
           </NuxtLink>
