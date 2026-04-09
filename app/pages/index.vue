@@ -260,7 +260,7 @@ const previewTours = [
           {{ t('courses.subtitle') }}
         </p>
         <NuxtLink
-            :to="paths.corsi"
+          :to="paths.corsi"
           class="focus-ring mt-8 inline-flex min-h-[44px] items-center font-display text-sm font-bold uppercase tracking-wide text-primary hover:text-white"
         >
           {{ t('home.sectionCoursesCta') }} →
