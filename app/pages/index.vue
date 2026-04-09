@@ -23,14 +23,30 @@ const previewTours = [
   <div class="bg-dark">
     <section
       id="home"
-      class="relative flex min-h-[100svh] flex-col justify-end bg-dark pb-12 pt-24 md:justify-center md:pb-24 md:pt-32"
+      class="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-dark pb-12 pt-24 md:justify-center md:pb-24 md:pt-32"
       aria-label="Hero"
     >
       <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        class="absolute inset-0"
+        aria-hidden="true"
+      >
+        <img
+          src="/hero.jpeg"
+          alt=""
+          width="1920"
+          height="1080"
+          class="h-full w-full object-cover object-[52%_center] sm:object-[55%_center] lg:object-[58%_center]"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+        >
+      </div>
+      <div
+        class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/93 via-[#0a0a0a]/50 to-transparent"
+        aria-hidden="true"
       />
       <div
-        class="absolute inset-0 bg-dark/70"
+        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-transparent md:hidden"
         aria-hidden="true"
       />
       <div class="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-6">
