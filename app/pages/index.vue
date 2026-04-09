@@ -8,9 +8,9 @@ const trustMetrics = {
   googleRating: 4.8
 }
 const previewVehicles = [
-  { id: 1, name: 'Vespa Primavera', image: '/vehicles/vespa-primavera.jpg' },
-  { id: 2, name: 'Lambretta LI', image: '/vehicles/lambretta-li.jpg' },
-  { id: 3, name: 'Piaggio Liberty', image: '/vehicles/piaggio-liberty.jpg' }
+  { id: 1, name: 'Ducati Multistrada V4', image: '/vehicles/v4.webp' },
+  { id: 2, name: 'Ducati Monster 800 S2R ', image: '/vehicles/s2r.jpg' },
+  { id: 3, name: 'DR AUTOMOBILES DR 5', image: '/vehicles/dr5.webp' }
 ]
 const previewTours = [
   { id: 1, name: 'Tour Città', image: '/tours/tour-citta.jpg' },
@@ -150,9 +150,9 @@ const previewTours = [
             v-for="v in previewVehicles"
             :key="v.id"
             :to="localePath({ name: 'veicoli' })"
-            class="card card-elevated focus-ring group block border-border transition-shadow duration-200 hover:shadow-md"
+            class="focus-ring group block overflow-hidden rounded-brand border border-white/10 bg-[#1a1a1a] shadow-[0_1px_2px_rgba(0,0,0,0.35)] transition-all duration-200 hover:border-primary/50 hover:shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
           >
-            <div class="aspect-[4/3] overflow-hidden bg-neutral-900">
+            <div class="aspect-[4/3] overflow-hidden bg-neutral-950">
               <img
                 :src="v.image"
                 :alt="v.name"
@@ -162,10 +162,13 @@ const previewTours = [
                 loading="lazy"
               >
             </div>
-            <div class="border-t border-border bg-white p-4">
-              <p class="font-display text-lg font-bold text-dark">
+            <div class="border-t border-white/10 bg-[#141414] px-4 py-4">
+              <p class="font-display text-base font-bold leading-snug text-white md:text-lg">
                 {{ v.name }}
               </p>
+              <span class="mt-2 block font-display text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
+                {{ t('vehicles.discover') }}
+              </span>
             </div>
           </NuxtLink>
         </div>
@@ -204,7 +207,7 @@ const previewTours = [
             v-for="item in previewTours"
             :key="item.id"
             :to="localePath({ name: 'tour' })"
-            class="card card-elevated focus-ring group block transition-shadow duration-200 hover:shadow-md"
+            class="focus-ring group block overflow-hidden rounded-brand border border-border bg-white text-[#111111] shadow-sm transition-all duration-200 hover:border-primary/45 hover:shadow-md"
           >
             <div class="aspect-[4/3] overflow-hidden bg-white">
               <img
@@ -216,10 +219,13 @@ const previewTours = [
                 loading="lazy"
               >
             </div>
-            <div class="border-t border-border bg-white p-4">
-              <p class="font-display text-lg font-bold text-dark">
+            <div class="border-t border-border bg-surface px-4 py-4">
+              <p class="font-display text-lg font-bold leading-snug text-[#111111]">
                 {{ item.name }}
               </p>
+              <span class="mt-2 block font-display text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
+                {{ t('tours.discover') }}
+              </span>
             </div>
           </NuxtLink>
         </div>
