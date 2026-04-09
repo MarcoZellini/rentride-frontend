@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
-const localePath = useLocalePath()
+const paths = useLocalizedRoutes()
 
 const trustMetrics = {
   vehiclesCount: 120,
@@ -60,13 +60,13 @@ const previewTours = [
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
           <NuxtLink
-            :to="localePath({ name: 'veicoli' })"
+            :to="paths.veicoli"
             class="btn-primary inline-flex min-h-[44px] items-center px-6 py-3"
           >
             {{ t('hero.ctaVehicles') }}
           </NuxtLink>
           <NuxtLink
-            :to="localePath({ name: 'tour' })"
+            :to="paths.tour"
             class="font-display inline-flex min-h-[44px] items-center rounded-brand border-2 border-white bg-transparent px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-white/10"
           >
             {{ t('hero.ctaTours') }}
@@ -118,7 +118,7 @@ const previewTours = [
           {{ t('about.subtitle') }}
         </p>
         <NuxtLink
-          :to="localePath({ name: 'chi-siamo' })"
+          :to="paths.chiSiamo"
           class="focus-ring mt-8 inline-flex min-h-[44px] items-center font-display text-sm font-bold uppercase tracking-wide text-primary hover:underline"
         >
           {{ t('home.sectionAboutCta') }} →
@@ -149,7 +149,7 @@ const previewTours = [
           <NuxtLink
             v-for="v in previewVehicles"
             :key="v.id"
-            :to="localePath({ name: 'veicoli' })"
+            :to="paths.veicoli"
             class="focus-ring group block overflow-hidden rounded-brand border border-white/10 bg-[#1a1a1a] shadow-[0_1px_2px_rgba(0,0,0,0.35)] transition-all duration-200 hover:border-primary/50 hover:shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
           >
             <div class="aspect-[4/3] overflow-hidden bg-neutral-950">
@@ -174,7 +174,7 @@ const previewTours = [
         </div>
         <div class="mt-10">
           <NuxtLink
-            :to="localePath({ name: 'veicoli' })"
+            :to="paths.veicoli"
             class="focus-ring inline-flex min-h-[44px] items-center font-medium text-primary hover:text-white"
           >
             {{ t('home.seeAllVehicles') }} →
@@ -206,7 +206,7 @@ const previewTours = [
           <NuxtLink
             v-for="item in previewTours"
             :key="item.id"
-            :to="localePath({ name: 'tour' })"
+            :to="paths.tour"
             class="focus-ring group block overflow-hidden rounded-brand border border-border bg-white text-[#111111] shadow-sm transition-all duration-200 hover:border-primary/45 hover:shadow-md"
           >
             <div class="aspect-[4/3] overflow-hidden bg-white">
@@ -231,7 +231,7 @@ const previewTours = [
         </div>
         <div class="mt-10">
           <NuxtLink
-            :to="localePath({ name: 'tour' })"
+            :to="paths.tour"
             class="focus-ring inline-flex min-h-[44px] items-center font-medium text-primary hover:underline"
           >
             {{ t('home.seeAllTours') }} →
@@ -260,7 +260,7 @@ const previewTours = [
           {{ t('courses.subtitle') }}
         </p>
         <NuxtLink
-          :to="localePath({ name: 'corsi' })"
+            :to="paths.corsi"
           class="focus-ring mt-8 inline-flex min-h-[44px] items-center font-display text-sm font-bold uppercase tracking-wide text-primary hover:text-white"
         >
           {{ t('home.sectionCoursesCta') }} →
@@ -309,7 +309,7 @@ const previewTours = [
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
           <NuxtLink
-            :to="localePath({ name: 'contatti' })"
+            :to="paths.contatti"
             class="btn-primary inline-flex min-h-[44px] items-center px-6 py-3"
           >
             {{ t('nav.contact') }}

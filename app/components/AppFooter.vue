@@ -6,7 +6,7 @@
           <div class="flex flex-col gap-4">
             <div>
               <NuxtLink
-                :to="localePath('/')"
+                :to="paths.home"
                 class="focus-ring inline-flex items-center rounded-sm font-display text-sm font-bold uppercase tracking-widest text-white"
               >
                 Rent&Ride
@@ -86,6 +86,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
+const paths = useLocalizedRoutes()
 
 const site = {
   name: 'Rent&Ride Pesaro',

@@ -10,40 +10,43 @@ interface NavigationMenuItem {
 
 const route = useRoute()
 const { locale, t } = useI18n()
-const localePath = useLocalePath()
+const paths = useLocalizedRoutes()
 
-const items = computed<NavigationMenuItem[]>(() => [
-  {
-    label: t('nav.home'),
-    to: '/',
-    active: !!route.name?.toString().startsWith('index')
-  },
-  {
-    label: t('nav.about'),
-    to: 'chi-siamo',
-    active: !!route.name?.toString().startsWith('chi-siamo')
-  },
-  {
-    label: t('nav.vehicles'),
-    to: 'veicoli',
-    active: !!route.name?.toString().startsWith('veicoli')
-  },
-  {
-    label: t('nav.tours'),
-    to: 'tour',
-    active: !!route.name?.toString().startsWith('tour')
-  },
-  {
-    label: t('nav.courses'),
-    to: 'corsi',
-    active: !!route.name?.toString().startsWith('corsi')
-  },
-  {
-    label: t('nav.contact'),
-    to: 'contatti',
-    active: !!route.name?.toString().startsWith('contatti')
-  }
-])
+const items = computed<NavigationMenuItem[]>(() => {
+  const p = paths.value
+  return [
+    {
+      label: t('nav.home'),
+      to: p.home,
+      active: !!route.name?.toString().startsWith('index')
+    },
+    {
+      label: t('nav.about'),
+      to: p.chiSiamo,
+      active: !!route.name?.toString().startsWith('chi-siamo')
+    },
+    {
+      label: t('nav.vehicles'),
+      to: p.veicoli,
+      active: !!route.name?.toString().startsWith('veicoli')
+    },
+    {
+      label: t('nav.tours'),
+      to: p.tour,
+      active: !!route.name?.toString().startsWith('tour')
+    },
+    {
+      label: t('nav.courses'),
+      to: p.corsi,
+      active: !!route.name?.toString().startsWith('corsi')
+    },
+    {
+      label: t('nav.contact'),
+      to: p.contatti,
+      active: !!route.name?.toString().startsWith('contatti')
+    }
+  ]
+})
 </script>
 
 <template>
@@ -56,7 +59,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   >
     <template #left>
       <NuxtLink
-        to="/"
+        :to="paths.home"
         class="flex items-center gap-2 text-white"
       >
         <img
@@ -88,7 +91,7 @@ const items = computed<NavigationMenuItem[]>(() => [
       >EN</NuxtLink>
 
       <NuxtLink
-        :to="localePath('/contatti')"
+        :to="paths.contatti"
         class="btn-primary inline-flex min-h-11 items-center ms-3"
       >
         {{ t('nav.bookNow') }}
