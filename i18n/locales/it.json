@@ -25,7 +25,10 @@
     "ctaReadySub": "Scegli il mezzo, scrivici o passa a trovarci. Parti domani mattina.",
     "trustVehiclesLabel": "Mezzi disponibili",
     "trustToursLabel": "Tour organizzati",
-    "trustRating": "Rating Google"
+    "trustRating": "Rating Google",
+    "sectionAboutCta": "Scopri chi siamo",
+    "sectionCoursesCta": "Vai ai corsi",
+    "reviewsPlaceholder": "Le recensioni dei clienti saranno disponibili a breve."
   },
   "vehicles": {
     "title": "I nostri mezzi",

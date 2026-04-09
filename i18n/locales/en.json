@@ -25,7 +25,10 @@
     "ctaReadySub": "Pick your ride, get in touch or drop by. You could be on the road tomorrow.",
     "trustVehiclesLabel": "Vehicles available",
     "trustToursLabel": "Tours organised",
-    "trustRating": "Google rating"
+    "trustRating": "Google rating",
+    "sectionAboutCta": "Learn more about us",
+    "sectionCoursesCta": "View riding courses",
+    "reviewsPlaceholder": "Customer reviews will be available soon."
   },
   "vehicles": {
     "title": "Our vehicles",

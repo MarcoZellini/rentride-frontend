@@ -4,10 +4,10 @@ import Footer from './components/AppFooter.vue'
 </script>
 
 <template>
-  <UApp>
+  <UApp class="min-h-svh bg-dark">
     <Header />
 
-    <UMain>
+    <UMain class="bg-dark">
       <NuxtPage />
     </UMain>
 

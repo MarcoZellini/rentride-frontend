@@ -1,5 +1,5 @@
 <template>
-  <UFooter>
+  <UFooter class="bg-dark text-white">
     <template #top>
       <div class="mx-auto max-w-7xl px-4 md:px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -11,7 +11,7 @@
               >
                 Rent&Ride
               </NuxtLink>
-              <p class="mt-4 max-w-sm text-sm text-gray-400 leading-relaxed">
+              <p class="mt-4 max-w-sm text-sm leading-relaxed text-gray-300">
                 {{ t('footer.tagline') }}<br>
                 {{ t('footer.description') }}
               </p>
@@ -24,6 +24,7 @@
                 icon="i-simple-icons-instagram"
                 color="neutral"
                 variant="ghost"
+                class="text-gray-300 hover:text-white"
                 aria-label="Instagram"
               />
               <UButton
@@ -32,6 +33,7 @@
                 icon="i-simple-icons-facebook"
                 color="neutral"
                 variant="ghost"
+                class="text-gray-300 hover:text-white"
                 aria-label="Facebook"
               />
             </div>
@@ -45,9 +47,9 @@
               <div class="flex flex-col">
                 <NuxtLink
                   v-for="item in footerLinks"
-                  :key="item.to"
-                  :to="localePath(item.to)"
-                  class="text-sm text-gray-400 transition-colors hover:text-primary block"
+                  :key="item.name"
+                  :to="localePath({ name: item.name })"
+                  class="block text-sm text-gray-300 transition-colors hover:text-primary"
                 >
                   {{ t(item.label) }}
                 </NuxtLink>
@@ -59,7 +61,7 @@
     </template>
 
     <template #bottom>
-      <div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full text-sm text-gray-500 py-3 border-t border-gray-800/50">
+      <div class="flex w-full flex-col items-center justify-between gap-6 border-t border-white/10 py-3 text-sm text-gray-300 md:flex-row">
         <div>
           Built with ❤️ by Marco Zellini • © {{ new Date().getFullYear() }}
         </div>
@@ -71,7 +73,7 @@
         <div>
           <NuxtLink
             :to="localePath('/privacy')"
-            class="hover:text-primary transition-colors whitespace-nowrap"
+            class="whitespace-nowrap text-gray-300 transition-colors hover:text-primary"
           >
             {{ t('common.privacyPolicy') }}
           </NuxtLink>
@@ -96,11 +98,11 @@ const site = {
 }
 
 const footerLinks = [
-  { to: 'index', label: 'nav.home' }, // punta a pages/index.vue
-  { to: 'veicoli', label: 'nav.vehicles' }, // punta a pages/veicoli.vue -> /veicoli o /en/vehicles
-  { to: 'tour', label: 'nav.tours' },
-  { to: 'corsi', label: 'nav.courses' },
-  { to: 'chi-siamo', label: 'nav.about' },
-  { to: 'contatti', label: 'nav.contact' }
-]
+  { name: 'index', label: 'nav.home' },
+  { name: 'chi-siamo', label: 'nav.about' },
+  { name: 'veicoli', label: 'nav.vehicles' },
+  { name: 'tour', label: 'nav.tours' },
+  { name: 'corsi', label: 'nav.courses' },
+  { name: 'contatti', label: 'nav.contact' }
+] as const
 </script>

@@ -15,12 +15,17 @@ const localePath = useLocalePath()
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: t('nav.home'),
-    to: '/', // 'index' punta a pages/index.vue
+    to: '/',
     active: !!route.name?.toString().startsWith('index')
   },
   {
+    label: t('nav.about'),
+    to: 'chi-siamo',
+    active: !!route.name?.toString().startsWith('chi-siamo')
+  },
+  {
     label: t('nav.vehicles'),
-    to: 'veicoli', // Usa il nome del file, i18n farà il resto
+    to: 'veicoli',
     active: !!route.name?.toString().startsWith('veicoli')
   },
   {
@@ -34,11 +39,6 @@ const items = computed<NavigationMenuItem[]>(() => [
     active: !!route.name?.toString().startsWith('corsi')
   },
   {
-    label: t('nav.about'),
-    to: 'chi-siamo',
-    active: !!route.name?.toString().startsWith('chi-siamo')
-  },
-  {
     label: t('nav.contact'),
     to: 'contatti',
     active: !!route.name?.toString().startsWith('contatti')
@@ -47,23 +47,31 @@ const items = computed<NavigationMenuItem[]>(() => [
 </script>
 
 <template>
-  <UHeader>
+  <UHeader
+    class="border-b border-white/10 bg-dark text-white transition-all duration-300"
+    :ui="{
+      content: 'bg-dark text-white border-white/10',
+      body: 'bg-dark'
+    }"
+  >
     <template #left>
       <NuxtLink
         to="/"
-        class="flex items-center gap-2"
+        class="flex items-center gap-2 text-white"
       >
         <img
           src="/logo.png"
-          alt="Rent Ride Pesaro Logo"
-          class="w-auto h-12 shrink-0"
+          alt="Rent&Ride Pesaro logo"
+          class="h-12 w-auto shrink-0"
         >
-        <div class="text-xl font-bold">Rent&Ride</div>
+        <div class="font-display text-xl font-bold text-white">
+          Rent&Ride
+        </div>
       </NuxtLink>
     </template>
 
     <UNavigationMenu
-      class="uppercase text-2xl"
+      class="font-display text-sm font-bold uppercase tracking-wide md:text-base"
       :items="items"
     />
 
@@ -71,12 +79,12 @@ const items = computed<NavigationMenuItem[]>(() => [
       <NuxtLink
         v-if="locale !== 'it'"
         :to="$switchLocalePath('it')"
-        class="inline-flex min-h-11 items-center"
+        class="inline-flex min-h-11 items-center font-medium text-gray-300 transition-colors hover:text-primary"
       >IT</NuxtLink>
       <NuxtLink
         v-else
         :to="$switchLocalePath('en')"
-        class="inline-flex min-h-11 items-center"
+        class="inline-flex min-h-11 items-center font-medium text-gray-300 transition-colors hover:text-primary"
       >EN</NuxtLink>
 
       <NuxtLink
