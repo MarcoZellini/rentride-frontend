@@ -12,7 +12,7 @@ const paths = useLocalizedRoutes()
     <div class="mx-auto max-w-3xl text-center">
       <h2
         id="heading-contatti"
-        class="font-display text-3xl font-bold text-white md:text-4xl"
+        class="font-display text-3xl font-bold text-balance break-words text-white md:text-4xl"
       >
         {{ t('contact.title') }}
       </h2>

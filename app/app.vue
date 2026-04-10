@@ -7,7 +7,7 @@ import Footer from './components/AppFooter.vue'
   <UApp class="min-h-svh bg-dark">
     <Header />
 
-    <UMain class="bg-dark">
+    <UMain class="min-w-0 bg-dark">
       <NuxtPage />
     </UMain>
 

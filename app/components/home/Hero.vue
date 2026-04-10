@@ -34,11 +34,11 @@ const paths = useLocalizedRoutes()
     />
     <div class="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-6">
       <h1
-        class="font-display text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-6xl"
+        class="font-display text-4xl font-extrabold leading-tight text-white text-balance break-words md:text-5xl lg:text-6xl"
       >
         {{ t('hero.title') }}
       </h1>
-      <p class="mt-4 max-w-xl text-lg text-gray-200 md:text-xl">
+      <p class="mt-4 max-w-xl text-pretty text-lg text-gray-200 md:text-xl">
         {{ t('hero.subtitle') }}
       </p>
       <div class="mt-8 flex flex-wrap gap-4">

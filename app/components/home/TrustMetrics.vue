@@ -13,7 +13,7 @@ const { t } = useI18n()
     class="border-t border-white/10 bg-[#161616] py-8 md:py-10"
     aria-label="Numeri"
   >
-    <div class="mx-auto flex max-w-7xl flex-wrap justify-center gap-10 px-4 md:gap-16 md:px-6">
+    <div class="mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 md:gap-12 md:px-6 xl:flex-row xl:flex-wrap xl:justify-center xl:gap-16">
       <p class="text-center text-sm text-gray-400 md:text-base">
         <span class="font-display block text-3xl font-bold text-primary md:text-4xl">{{ vehiclesCount }}</span>
         <span class="mt-1 block font-medium tracking-wide text-gray-300">{{ t('home.trustVehiclesLabel') }}</span>

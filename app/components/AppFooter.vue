@@ -49,7 +49,7 @@
                   v-for="item in footerLinks"
                   :key="item.name"
                   :to="localePath({ name: item.name })"
-                  class="block text-sm text-gray-300 transition-colors hover:text-primary"
+                  class="flex min-h-11 items-center text-sm text-gray-300 transition-colors hover:text-primary"
                 >
                   {{ t(item.label) }}
                 </NuxtLink>
@@ -61,19 +61,19 @@
     </template>
 
     <template #bottom>
-      <div class="flex w-full flex-col items-center justify-between gap-6 border-t border-white/10 py-3 text-sm text-gray-300 md:flex-row">
-        <div>
+      <div class="flex w-full flex-col items-center justify-center gap-4 border-t border-white/10 py-4 text-center text-xs text-gray-300 sm:text-sm md:flex-row md:justify-between md:text-start">
+        <div class="max-w-prose px-1">
           Built with ❤️ by Marco Zellini • © {{ new Date().getFullYear() }}
         </div>
 
-        <div>
+        <div class="max-w-prose px-1">
           {{ site.name }} • P.IVA {{ site.piva }}
         </div>
 
         <div>
           <NuxtLink
             :to="localePath('/privacy')"
-            class="whitespace-nowrap text-gray-300 transition-colors hover:text-primary"
+            class="inline-flex min-h-11 items-center text-gray-300 transition-colors hover:text-primary"
           >
             {{ t('common.privacyPolicy') }}
           </NuxtLink>

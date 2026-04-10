@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n'],
 
+  app: {
+    head: {
+      viewport: 'width=device-width, initial-scale=1, viewport-fit=cover'
+    }
+  },
+
   components: [
     {
       path: '~/components',

@@ -40,6 +40,7 @@
 html {
   scroll-behavior: smooth;
   background-color: #111111;
+  overflow-x: hidden;
 }
 
 body {
@@ -48,6 +49,7 @@ body {
   color: #f4f4f5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .bg-dark [data-slot='link'] {
@@ -204,13 +206,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 }
 
-a, button {
+button {
   min-height: 44px;
 }
 
 a:not([class]) {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
 }
 
 button:not([class]) {
@@ -234,9 +237,35 @@ button:not([class]) {
   top: 0;
 }
 
-footer [data-slot="bottom"],
 footer [data-slot="top"] {
-  padding: 0 5rem;
+  padding-left: max(1rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1rem, env(safe-area-inset-right, 0px));
+}
+
+footer [data-slot="bottom"] {
+  padding-left: max(1rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1rem, env(safe-area-inset-right, 0px));
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  footer [data-slot="bottom"],
+  footer [data-slot="top"] {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  footer [data-slot="bottom"] {
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer [data-slot="bottom"],
+  footer [data-slot="top"] {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 
 footer [data-slot="container"] {

@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-
-interface NavigationMenuItem {
-  label: string
-  to: string
-  active: boolean
-}
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const route = useRoute()
 const { locale, t } = useI18n()
@@ -54,7 +49,9 @@ const items = computed<NavigationMenuItem[]>(() => {
     class="border-b border-white/10 bg-dark text-white transition-all duration-300"
     :ui="{
       content: 'bg-dark text-white border-white/10',
-      body: 'bg-dark'
+      body: 'bg-dark',
+      right: 'flex flex-wrap items-center justify-end gap-x-2 gap-y-1 lg:flex-1',
+      header: 'border-b border-white/10 bg-dark'
     }"
   >
     <template #left>
@@ -65,16 +62,16 @@ const items = computed<NavigationMenuItem[]>(() => {
         <img
           src="/logo.png"
           alt="Rent&Ride Pesaro logo"
-          class="h-12 w-auto shrink-0"
+          class="h-10 w-auto shrink-0 sm:h-11 lg:h-12"
         >
-        <div class="font-display text-xl font-bold text-white">
+        <div class="font-display text-lg font-bold text-white sm:text-xl">
           Rent&Ride
         </div>
       </NuxtLink>
     </template>
 
     <UNavigationMenu
-      class="font-display text-sm font-bold uppercase tracking-wide md:text-base"
+      class="font-display text-sm font-bold uppercase tracking-wide lg:text-base"
       :items="items"
     />
 
@@ -92,10 +89,18 @@ const items = computed<NavigationMenuItem[]>(() => {
 
       <NuxtLink
         :to="paths.contatti"
-        class="btn-primary inline-flex min-h-11 items-center ms-3"
+        class="btn-primary inline-flex min-h-11 max-w-full shrink items-center px-3 text-center sm:px-4"
       >
         {{ t('nav.bookNow') }}
       </NuxtLink>
+    </template>
+
+    <template #body>
+      <UNavigationMenu
+        :items="items"
+        orientation="vertical"
+        class="-mx-2.5 font-display text-sm font-bold uppercase tracking-wide"
+      />
     </template>
   </UHeader>
 </template>
