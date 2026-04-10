@@ -2,6 +2,18 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n'],
 
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: true,
+      ignore: ['**/commons/**']
+    },
+    {
+      path: '~/components/commons',
+      pathPrefix: false
+    }
+  ],
+
   devtools: {
     enabled: true
   },

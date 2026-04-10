@@ -10,19 +10,18 @@ const paths = useLocalizedRoutes()
     aria-labelledby="heading-corsi"
   >
     <div class="mx-auto max-w-7xl px-4 md:px-6">
-      <div
-        class="h-1 w-14 rounded-brand bg-primary"
-        aria-hidden="true"
-      />
-      <h2
-        id="heading-corsi"
-        class="mt-4 font-display text-3xl font-bold text-white md:text-4xl"
+      <SectionHeading
+        heading-id="heading-corsi"
+        tone="dark"
+        description-spacing="relaxed"
       >
-        {{ t('courses.title') }}
-      </h2>
-      <p class="mt-4 max-w-2xl text-base leading-relaxed text-gray-400 md:text-lg">
-        {{ t('courses.subtitle') }}
-      </p>
+        <template #title>
+          {{ t('courses.title') }}
+        </template>
+        <template #description>
+          {{ t('courses.subtitle') }}
+        </template>
+      </SectionHeading>
       <NuxtLink
         :to="paths.corsi"
         class="focus-ring mt-8 inline-flex min-h-[44px] items-center font-display text-sm font-bold uppercase tracking-wide text-primary hover:text-white"

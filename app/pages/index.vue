@@ -10,9 +10,9 @@ const previewVehicles = [
   { id: 3, name: 'DR AUTOMOBILES DR 5', image: '/vehicles/dr5.webp' }
 ]
 const previewTours = [
-  { id: 1, name: 'Tour Città', image: '/tours/tour-citta.jpg' },
-  { id: 2, name: 'Tour Collina', image: '/tours/tour-collina.jpg' },
-  { id: 3, name: 'Tour Mare', image: '/tours/tour-mare.jpg' }
+  { id: 1, name: 'Panoramica', image: '/tours/panoramica.png' },
+  { id: 2, name: 'Bocca Trabaria', image: '/tours/bocca-trabaria.png' },
+  { id: 3, name: 'Bocca Seriola', image: '/tours/bocca-serriola.png' }
 ]
 </script>
 
